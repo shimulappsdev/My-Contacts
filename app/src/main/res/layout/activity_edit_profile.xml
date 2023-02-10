@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:src="@drawable/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/updateImage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="12dp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/profilehint"
+        app:civ_border_color="@color/bg_color"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <ImageView
+        android:id="@+id/updateImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/addimage"
+        app:layout_constraintBottom_toBottomOf="@id/updateImage"
+        app:layout_constraintEnd_toEndOf="@id/updateImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/updateImage" />
+
+
+    <EditText
+        android:id="@+id/updateName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="text"
+        android:drawableLeft="@drawable/name"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateImgBtn"/>
+    <EditText
+        android:id="@+id/updateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/_5sdp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateName"/>
+
+    <EditText
+        android:id="@+id/updatePhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateEmail"/>
+
+    <EditText
+        android:id="@+id/updatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="text"
+        android:drawableLeft="@drawable/password"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updatePhone"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateProfileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/add_contact_btn_back"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Save Change"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updatePassword"
+        app:layout_constraintVertical_bias="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

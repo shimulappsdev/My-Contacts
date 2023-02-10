@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/_6sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginBottom="@dimen/_1sdp"
+    app:cardCornerRadius="@dimen/_6sdp"
+    android:padding="@dimen/_4sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactImageTV"
+            android:src="@drawable/profilehint"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_margin="@dimen/_2sdp"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/bg_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/contactNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of Person"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/text"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/contactImageTV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/contactNumberTV"
+            />
+        <TextView
+            android:id="@+id/contactNumberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01700000000"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/text"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/contactImageTV"
+            app:layout_constraintTop_toBottomOf="@id/contactNameTV"
+            app:layout_constraintBottom_toTopOf="@id/contactEmailTV"
+            />
+
+        <TextView
+            android:id="@+id/contactEmailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample@gmail.com"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/text"
+            android:textStyle="italic"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/contactImageTV"
+            app:layout_constraintTop_toBottomOf="@id/contactNumberTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <ImageView
+            android:id="@+id/callBtn"
+            android:src="@drawable/call"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/_3sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/messageBtn"
+            android:src="@drawable/message"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:scaleType="centerCrop"
+            android:layout_margin="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

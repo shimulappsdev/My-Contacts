@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".RegistrationActivity">
+
+    <TextView
+        android:id="@+id/appsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="My Contacts"
+        android:textSize="@dimen/_25ssp"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/caveat_bold"
+        android:includeFontPadding="false"
+        android:text="Keep Your Contact Safe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="@id/appsName"
+        app:layout_constraintStart_toStartOf="@id/appsName"
+        app:layout_constraintTop_toBottomOf="@id/appsName" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:hint="Enter Your Name"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/edit_text_back"
+        android:inputType="text"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/text"
+        android:drawableLeft="@drawable/name"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/word"/>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:hint="Enter Your Email"
+        android:layout_height="@dimen/_50sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/edit_text_back"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/text"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"/>
+
+    <EditText
+        android:id="@+id/phoneInput"
+        android:layout_width="match_parent"
+        android:hint="Enter Your Phone"
+        android:layout_height="@dimen/_50sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/edit_text_back"
+        android:inputType="phone"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/text"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@android:color/transparent"
+        app:startIconDrawable="@drawable/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="@dimen/_50sdp"
+            android:fontFamily="@font/roboto"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:hint="Enter Your Password"
+            android:background="@drawable/edit_text_back"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/text"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passLayout"
+        app:layout_constraintVertical_bias="0.345">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/btn_back"
+            android:fontFamily="@font/roboto"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:progressTint="@color/orange"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="@id/registerBtn"
+            app:layout_constraintEnd_toEndOf="@id/registerBtn"
+            app:layout_constraintTop_toTopOf="@id/registerBtn"
+            app:layout_constraintBottom_toBottomOf="@id/registerBtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/alreadyRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto"
+        android:text="Already Register ?"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

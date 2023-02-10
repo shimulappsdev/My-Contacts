@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_back"
+    tools:context=".UpdateActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:src="@drawable/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/updateImage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="12dp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/profilehint"
+        app:civ_border_color="@color/bg_color"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <ImageView
+        android:id="@+id/updateImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/addimage"
+        app:layout_constraintBottom_toBottomOf="@id/updateImage"
+        app:layout_constraintEnd_toEndOf="@id/updateImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/updateImage" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/operationCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateImage"
+        app:layout_constraintBottom_toTopOf="@id/updateName">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            >
+            <ImageView
+                android:id="@+id/callBtn"
+                android:src="@drawable/call"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/msgBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/msgBtn"
+                android:src="@drawable/message"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toEndOf="@id/callBtn"
+                app:layout_constraintEnd_toStartOf="@id/emailBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/emailBtn"
+                android:src="@drawable/ic_baseline_email_24"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toEndOf="@id/msgBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/updateName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:hint="Contact Name"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="text"
+        android:drawableLeft="@drawable/name"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operationCard"/>
+    <EditText
+        android:id="@+id/updateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:hint="Contact Email"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateName"/>
+
+    <EditText
+        android:id="@+id/updatePhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:hint="Contact Number"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateEmail"/>
+
+    <EditText
+        android:id="@+id/updateShortDes"
+        android:layout_width="match_parent"
+        android:hint="Contact Short Description"
+        android:layout_height="@dimen/_50sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:gravity="start"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updatePhone"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateContactBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/add_contact_btn_back"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Save Change"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateShortDes"
+        app:layout_constraintVertical_bias="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

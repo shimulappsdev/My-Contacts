@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:src="@drawable/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contactImage"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/profilehint"
+        app:civ_border_color="@color/bg_color"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <ImageView
+        android:id="@+id/addImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/addimage"
+        app:layout_constraintBottom_toBottomOf="@id/contactImage"
+        app:layout_constraintEnd_toEndOf="@id/contactImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/contactImage" />
+
+    <EditText
+        android:id="@+id/contactName"
+        android:layout_width="match_parent"
+        android:hint="Contact Name"
+        android:layout_height="@dimen/_45sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="text"
+        android:drawableLeft="@drawable/name"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactImage"/>
+
+    <EditText
+        android:id="@+id/contactEmail"
+        android:layout_width="match_parent"
+        android:hint="Contact Email"
+        android:layout_height="@dimen/_45sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactName"/>
+
+    <EditText
+        android:id="@+id/contactNumber"
+        android:layout_width="match_parent"
+        android:hint="Contact Number"
+        android:layout_height="@dimen/_45sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactEmail"/>
+
+    <EditText
+        android:id="@+id/contactShortDes"
+        android:layout_width="match_parent"
+        android:hint="Contact Short Description"
+        android:layout_height="@dimen/_65sdp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/contact_edit_text_back"
+        android:textSize="@dimen/_12ssp"
+        android:gravity="start"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactNumber"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addContactBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/add_contact_btn_back"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Add to Contact"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contactShortDes"
+        app:layout_constraintVertical_bias="0.398" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
